@@ -15,7 +15,6 @@ const fetcher = (variables, token) => {
         user(login: $login) {
           # do not fetch forks
           repositories(ownerAffiliations: $ownerAffiliations, isFork: false, first: 100) {
-          repositories(ownerAffiliations: OWNER, isFork: false, first: 100) {
             nodes {
               name
               languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
